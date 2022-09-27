@@ -15,11 +15,17 @@
         padding: 1rem;
     }
 
+    &__title {
+        padding: 1rem;
+
+    }
+
     &__name {
         padding-bottom: 0.5rem;
+        padding-top: 0.5rem;
 
-        &:not(first-child) {
-            padding-top: 0.5rem;
+        &:first-child {
+            padding-top: 1rem;
         }
     }
 

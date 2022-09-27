@@ -83,11 +83,12 @@ function ConnectInputTask(props) {
                 <i className='fa-solid fa-pen icon icon-edit'></i>
                 <i className='fa-solid fa-xmark icon '></i>
             </div>
-            <div>
-                <input type='text'
+            <div className='input__title'>
+                <input type='text' name='name'
                     className={'task__title ' + (state.complete ? 'task-complete ' : '')}
                     value={state.name}
-                    onChange={changeState} />
+                    onChange={changeState}
+                    placeholder='標題' />
             </div>
 
             <InputForm
