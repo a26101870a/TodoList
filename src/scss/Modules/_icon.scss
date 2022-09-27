@@ -1,0 +1,11 @@
+.icon {
+    font-size: 1.25rem;
+
+    &-important {
+        color: $important-icon-color;
+    }
+
+    &-edit {
+        color: $important-icon-edit;
+    }
+}

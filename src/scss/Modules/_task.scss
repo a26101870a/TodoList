@@ -1,0 +1,111 @@
+.task {
+    @include ContainerSize(100%, 20vh);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    border: $border-black;
+    border-radius: 20px;
+
+    &-important {
+        background: $important-background;
+        border-radius: 20px 20px 0 0;
+    }
+
+    &-complete {
+        text-decoration: line-through;
+        color: $complete-text-color;
+    }
+
+    &__topbar {
+        @include ContainerSize(100%, auto);
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        padding: 0.5rem;
+        border-bottom: $border-black;
+    }
+
+    &__body {
+        @include ContainerSize(100%, 100%);
+    }
+
+    &__title {
+        @include ContainerSize(60%, 30%);
+        float: left;
+
+        padding-left: 1rem;
+        background-color: white;
+        border: none;
+
+        font-size: 1.25rem;
+    }
+
+    &__date {
+        @include ContainerSize(40%, 30%);
+        display: flex;
+        align-items: center;
+
+        padding-left: 1rem;
+
+        font-size: 1.25rem;
+
+        i {
+            padding-right: 0.25rem;
+        }
+    }
+
+    &__comment {
+        height: 9vh;
+        padding: 0.5rem;
+        padding-left: 1rem;
+
+        font-size: 0.9rem;
+        color: gray;
+        overflow-y: scroll;
+    }
+
+    &__check {
+        margin-right: 2rem;
+        zoom: 2;
+    }
+}
+
+#inputTask {
+    @include ContainerSize(70%, 100%);
+}
+
+
+@media screen and (min-width: 768px) {
+    .task {
+        &__topbar {
+            justify-content: flex-end;
+
+            i {
+                padding-right: 1.5rem
+            }
+        }
+
+        &__title {
+            @include ContainerSize(70%, 30%);
+        }
+
+        &__date {
+            @include ContainerSize(30%, 30%);
+        }
+
+        &__check {
+            margin-right: 8rem;
+        }
+    }
+
+    #inputTask {
+        @include ContainerSize(70%, 100%);
+    }
+
+    #addTask {
+        @include ContainerSize(40%, 100%);
+    }
+}

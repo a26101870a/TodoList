@@ -1,0 +1,21 @@
+.l-main {
+    @include ContainerSize(100vw, 100vh);
+
+    display: grid;
+    grid-template-rows: 10% 90%;
+}
+
+.l-topbar {
+    grid-template-rows: 1/2;
+}
+
+.l-content {
+    grid-template-rows: 2/3;
+}
+
+@media screen and (min-width: 768px) {
+    .l-main {
+        width: 768px;
+        margin: 0 auto;
+    }
+}
